@@ -1,11 +1,16 @@
 :root {
-    --color-black: #060808;
+    --color-black: #2c2c2c;
     --color-white: #ffffff;
+    --color-cream: #faf8f5;
+    --color-blush: #f5e6e0;
+    --color-rose: #d4a5a5;
+    --color-sage: #a8b5a0;
+    --color-dusty-pink: #c9a9a6;
     --color-gray-100: #f8f8f8;
     --color-gray-200: #e5e5e5;
     --color-gray-400: #9ca3af;
-    --color-gray-600: #4b5563;
-    --color-red: #dc2626;
+    --color-gray-600: #6b7280;
+    --color-red: #c45c5c;
     --font-serif: 'Cormorant Garamond', Georgia, serif;
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --spacing-xs: 0.25rem;
@@ -14,8 +19,8 @@
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
     --spacing-2xl: 3rem;
-    --border-radius: 20px;
-    --transition: 0.2s ease;
+    --border-radius: 30px;
+    --transition: 0.3s ease;
 }
 
 *,
@@ -34,7 +39,7 @@ html {
 body {
     font-family: var(--font-sans);
     color: var(--color-black);
-    background-color: var(--color-white);
+    background-color: var(--color-cream);
     line-height: 1.5;
     min-height: 100vh;
     display: flex;
@@ -85,7 +90,8 @@ ul {
 
 .header {
     padding: var(--spacing-md) var(--spacing-lg);
-    border-bottom: 1px solid var(--color-gray-200);
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-blush);
 }
 
 .nav {
@@ -206,51 +212,72 @@ ul {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 160px;
-    min-height: 44px;
-    padding: var(--spacing-sm) var(--spacing-xl);
+    min-width: 180px;
+    min-height: 50px;
+    padding: var(--spacing-md) var(--spacing-xl);
     font-family: var(--font-serif);
     font-size: 1.125rem;
-    border: 1px solid var(--color-black);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    border: 2px solid var(--color-dusty-pink);
     border-radius: var(--border-radius);
     transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
 .btn-primary {
-    background: var(--color-white);
-    color: var(--color-black);
+    background: var(--color-dusty-pink);
+    color: var(--color-white);
+    border-color: var(--color-dusty-pink);
+    box-shadow: 0 4px 15px rgba(201, 169, 166, 0.3);
 }
 
 .btn-primary:hover {
-    background: var(--color-black);
-    color: var(--color-white);
+    background: var(--color-rose);
+    border-color: var(--color-rose);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(201, 169, 166, 0.4);
 }
 
 .btn-secondary {
-    background: var(--color-white);
+    background: transparent;
     color: var(--color-black);
+    border-color: var(--color-sage);
 }
 
 .btn-secondary:hover {
-    background: var(--color-gray-100);
+    background: var(--color-sage);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(168, 181, 160, 0.3);
 }
 
 .btn-buy {
-    background: var(--color-black);
+    background: var(--color-dusty-pink);
     color: var(--color-white);
     font-family: var(--font-sans);
     font-size: 0.875rem;
+    font-weight: 500;
     min-width: 100%;
+    min-height: 44px;
     margin-top: var(--spacing-sm);
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 3px 10px rgba(201, 169, 166, 0.3);
 }
 
 .btn-buy:hover {
-    background: var(--color-gray-600);
+    background: var(--color-rose);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 15px rgba(201, 169, 166, 0.4);
 }
 
 .btn-buy:disabled {
     background: var(--color-gray-400);
     cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
 }
 
 .featured-icons {
@@ -440,9 +467,10 @@ ul {
 .product-image-wrapper {
     position: relative;
     aspect-ratio: 1;
-    background: var(--color-gray-100);
+    background: var(--color-white);
     margin-bottom: var(--spacing-sm);
     overflow: hidden;
+    border-radius: 12px;
 }
 
 .product-image {
@@ -576,7 +604,8 @@ ul {
 .footer {
     padding: var(--spacing-lg);
     text-align: center;
-    border-top: 1px solid var(--color-gray-200);
+    background: var(--color-white);
+    border-top: 1px solid var(--color-blush);
     margin-top: auto;
 }
 
