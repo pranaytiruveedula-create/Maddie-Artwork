@@ -328,10 +328,31 @@ ul {
     transform: scale(1.02);
 }
 
+.hero-image {
+    width: 100%;
+    max-width: 700px;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    text-align: center;
+}
+
+.hero-art-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.hero-art-image:hover {
+    transform: scale(1.02);
+}
+
 @media (max-width: 768px) {
     .featured-art {
         flex-direction: column;
         gap: var(--spacing-lg);
+    }
+    
+    .hero-image {
+        max-width: 90%;
     }
     
     .art-left,
