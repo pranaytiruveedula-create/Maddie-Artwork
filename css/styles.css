@@ -435,10 +435,12 @@ ul {
     min-height: 44px;
 }
 
-.filter-group input[type="checkbox"] {
+.filter-group input[type="checkbox"],
+.filter-group input[type="radio"] {
     width: 18px;
     height: 18px;
     cursor: pointer;
+    accent-color: var(--color-dusty-pink);
 }
 
 .products-grid {

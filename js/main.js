@@ -117,14 +117,16 @@ function renderProducts(productsToRender) {
     });
 }
 
-function filterProducts() {
+function filterAndSortProducts() {
     const categoryCheckboxes = document.querySelectorAll('input[name="category"]:checked');
     const availabilityCheckboxes = document.querySelectorAll('input[name="availability"]:checked');
+    const sortOption = document.querySelector('input[name="sort"]:checked');
 
     const selectedCategories = Array.from(categoryCheckboxes).map(cb => cb.value);
     const selectedAvailability = Array.from(availabilityCheckboxes).map(cb => cb.value);
+    const sortValue = sortOption ? sortOption.value : 'default';
 
-    let filtered = products;
+    let filtered = [...products];
 
     if (selectedCategories.length > 0) {
         filtered = filtered.filter(p => selectedCategories.includes(p.category));
@@ -136,6 +138,12 @@ function filterProducts() {
             if (selectedAvailability.includes('sold-out') && p.soldOut) return true;
             return false;
         });
+    }
+
+    if (sortValue === 'high-low') {
+        filtered.sort((a, b) => b.price - a.price);
+    } else if (sortValue === 'low-high') {
+        filtered.sort((a, b) => a.price - b.price);
     }
 
     renderProducts(filtered);
@@ -153,9 +161,9 @@ function initFilterPanel() {
         filterPanel.hidden = isExpanded;
     });
 
-    const checkboxes = filterPanel.querySelectorAll('input[type="checkbox"]');
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', filterProducts);
+    const inputs = filterPanel.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+    inputs.forEach(input => {
+        input.addEventListener('change', filterAndSortProducts);
     });
 }
 
