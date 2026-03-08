@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Products | Maddie Artwork</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <nav class="nav" aria-label="Main navigation">
+            <a href="index.html" class="nav-icon" aria-label="Home">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                    <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                </svg>
+            </a>
+            
+            <div class="nav-social">
+                <a href="https://tiktok.com/@maddieartwork" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                    </svg>
+                    <span>TikTok</span>
+                </a>
+                <a href="https://instagram.com/maddieartwork" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                    </svg>
+                    <span>@maddieartwork</span>
+                </a>
+                <a href="#" class="nav-icon cart-icon" aria-label="Shopping cart">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <path d="M16 10a4 4 0 0 1-8 0"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content" class="main-products">
+        <section class="products-header">
+            <h1>All Products</h1>
+            
+            <div class="products-controls">
+                <button class="filter-btn" aria-expanded="false" aria-controls="filter-panel">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <line x1="4" y1="21" x2="4" y2="14"></line>
+                        <line x1="4" y1="10" x2="4" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="12"></line>
+                        <line x1="12" y1="8" x2="12" y2="3"></line>
+                        <line x1="20" y1="21" x2="20" y2="16"></line>
+                        <line x1="20" y1="12" x2="20" y2="3"></line>
+                        <line x1="1" y1="14" x2="7" y2="14"></line>
+                        <line x1="9" y1="8" x2="15" y2="8"></line>
+                        <line x1="17" y1="16" x2="23" y2="16"></line>
+                    </svg>
+                    Filter
+                </button>
+                
+                <div class="view-toggle" role="group" aria-label="View options">
+                    <button class="view-btn" aria-pressed="false" data-view="list" aria-label="List view">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        </svg>
+                    </button>
+                    <button class="view-btn active" aria-pressed="true" data-view="grid" aria-label="Grid view">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <rect x="3" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="3" width="7" height="7"></rect>
+                            <rect x="14" y="14" width="7" height="7"></rect>
+                            <rect x="3" y="14" width="7" height="7"></rect>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div id="filter-panel" class="filter-panel" hidden>
+            <div class="filter-group">
+                <h3>Category</h3>
+                <label><input type="checkbox" name="category" value="tops"> Tops</label>
+                <label><input type="checkbox" name="category" value="bottoms"> Bottoms</label>
+                <label><input type="checkbox" name="category" value="outerwear"> Outerwear</label>
+                <label><input type="checkbox" name="category" value="accessories"> Accessories</label>
+            </div>
+            <div class="filter-group">
+                <h3>Availability</h3>
+                <label><input type="checkbox" name="availability" value="available"> In Stock</label>
+                <label><input type="checkbox" name="availability" value="sold-out"> Sold Out</label>
+            </div>
+        </div>
+
+        <section class="products-grid" aria-label="Products">
+            <!-- Products will be injected by JavaScript -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Maddie Artwork</p>
+        <a href="terms.html">Terms and Policies</a>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
